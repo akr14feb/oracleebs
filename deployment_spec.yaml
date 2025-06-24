@@ -1,0 +1,22 @@
+version: 1.0 
+component: deployment 
+runAs: root
+env: 
+    variables:        
+timeoutInSeconds:  
+files:  
+  - source: /
+    destination: /tmp/integrationTestFolder                              
+steps:                              
+  - stepType: Command 
+    name: TestRunSingleCommand
+    command: ls
+    runAs: root
+    timeoutInSeconds: 300
+  # This section is to define the scripts that each step runs on the instance after file copy.
+  - stepType: Command 
+    name: Install Dependencies
+    command: sudo yum install wget
+    runAs: root
+    timeoutInSeconds: 300
+    
