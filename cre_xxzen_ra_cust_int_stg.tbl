@@ -1,0 +1,49 @@
+
+DROP TABLE xxzen.xxzen_ra_cust_int_stg ;
+
+DROP PUBLIC SYNONYM xxzen_ra_cust_int_stg ;
+
+CREATE TABLE xxzen.xxzen_ra_cust_int_stg
+(customer_name              VARCHAR2(50)
+,account_name              VARCHAR2(50)
+,customer_type             VARCHAR2(30)
+,tax_reg_no                VARCHAR2(50)
+,taxpayer_id               VARCHAR2(50)
+,address_line_1            VARCHAR2(240)
+,address_line_2            VARCHAR2(240)
+,address_line_3            VARCHAR2(240)
+,address_line_4            VARCHAR2(240)
+,country                   VARCHAR2(60)
+,city                      VARCHAR2(60)
+,state                     VARCHAR2(60)
+,zip                       VARCHAR2(60)
+,county                    VARCHAR2(60)
+,reference                 VARCHAR2(240)
+,bill_to_flag              VARCHAR2(1)
+,primary_bill_to_flag      VARCHAR2(1)
+,bill_to_contact_lname     VARCHAR2(50)
+,bill_to_contact_fname     VARCHAR2(40)
+,bill_to_contact_phone     VARCHAR2(30)
+,bill_to_contact_ph_ext    VARCHAR2(30)
+,bill_to_contact_fax       VARCHAR2(30)
+,ship_to_flag              VARCHAR2(1)
+,primary_ship_to_flag      VARCHAR2(1)
+,ship_to_contact_lname     VARCHAR2(50)
+,ship_to_contact_fname     VARCHAR2(40)
+,ship_to_contact_phone     VARCHAR2(30)
+,customer_profile_class    VARCHAR2(30)
+,customer_email            VARCHAR2(240)
+,customer_payment_terms    VARCHAR2(30)
+,customer_url              VARCHAR2(240)
+,customer_date_established DATE
+,customer_price_list       VARCHAR2(240)
+,salesperson               VARCHAR2(240)
+,customer_credit_hold_flag VARCHAR2(1)
+,customer_credit_amount    NUMBER
+,comments                  VARCHAR2(240)
+,order_type                VARCHAR2(240)
+,warehouse                 VARCHAR2(240)
+,load_status                VARCHAR2(240)
+) ;
+
+CREATE PUBLIC SYNONYM xxzen_ra_cust_int_stg FOR xxzen.xxzen_ra_cust_int_stg ;
